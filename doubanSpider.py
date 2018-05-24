@@ -43,7 +43,7 @@ def book_spider(book_tag):
         #source_code = requests.get(url) 
         #plain_text = source_code.text  
         
-        soup = BeautifulSoup(plain_text)
+        soup = BeautifulSoup(plain_text, 'lxml')
         list_soup = soup.find('div', {'class': 'mod book-list'})
         
         try_times+=1;
